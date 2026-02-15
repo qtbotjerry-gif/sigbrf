@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignalBrief - AI-Powered Podcast Digests</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .tagline {
+            font-size: 1.5em;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+        
+        .hero {
+            background: white;
+            border-radius: 12px;
+            padding: 60px 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        
+        .hero h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+        
+        .hero p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .feature {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .feature h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+        
+        .feature p {
+            color: #666;
+        }
+        
+        .pricing {
+            background: white;
+            border-radius: 12px;
+            padding: 60px 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        
+        .pricing h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            color: #667eea;
+        }
+        
+        .plans {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .plan {
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .plan:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+            border-color: #667eea;
+        }
+        
+        .plan-name {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .plan-price {
+            font-size: 3em;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .plan-price span {
+            font-size: 0.4em;
+            color: #999;
+        }
+        
+        .plan-features {
+            list-style: none;
+            margin: 30px 0;
+            text-align: left;
+        }
+        
+        .plan-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .plan-features li:before {
+            content: "✓ ";
+            color: #667eea;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: #5568d3;
+        }
+        
+        .btn-secondary {
+            background: #764ba2;
+        }
+        
+        .btn-secondary:hover {
+            background: #653a8e;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+            opacity: 0.9;
+        }
+        
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            .tagline {
+                font-size: 1.2em;
+            }
+            
+            .hero h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧠 SignalBrief</h1>
+            <p class="tagline">AI-Powered Intelligence from Your Favorite Podcasts</p>
+        </header>
+        
+        <div class="hero">
+            <h2>Stop Drowning in Podcast Backlogs</h2>
+            <p>SignalBrief transforms your favorite podcasts into concise, actionable daily digests delivered straight to your inbox.</p>
+            <p>No more hours of listening. Just the insights that matter, when you need them.</p>
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <h3>🎯 Curated Intelligence</h3>
+                <p>Advanced AI extracts key topics, strategic takeaways, and actionable insights from every episode.</p>
+            </div>
+            
+            <div class="feature">
+                <h3>📧 Daily Delivery</h3>
+                <p>Wake up to a beautifully formatted digest covering the latest episodes from your subscribed podcasts.</p>
+            </div>
+            
+            <div class="feature">
+                <h3>🚀 Save Hours Weekly</h3>
+                <p>Get the signal without the noise. Perfect for busy professionals who value their time.</p>
+            </div>
+        </div>
+        
+        <div class="pricing">
+            <h2>Choose Your Plan</h2>
+            <div class="plans">
+                <div class="plan">
+                    <div class="plan-name">Starter</div>
+                    <div class="plan-price">$39<span>/month</span></div>
+                    <ul class="plan-features">
+                        <li>Up to 10 podcasts</li>
+                        <li>Daily email digests</li>
+                        <li>AI-powered analysis</li>
+                        <li>Strategic takeaways</li>
+                        <li>Email support</li>
+                    </ul>
+                    <a href="STRIPE_STARTER_LINK" class="btn">Start Free Trial</a>
+                </div>
+                
+                <div class="plan">
+                    <div class="plan-name">Pro</div>
+                    <div class="plan-price">$79<span>/month</span></div>
+                    <ul class="plan-features">
+                        <li>Up to 25 podcasts</li>
+                        <li>Daily email digests</li>
+                        <li>AI-powered analysis</li>
+                        <li>Strategic takeaways</li>
+                        <li>Priority support</li>
+                        <li>Custom delivery times</li>
+                    </ul>
+                    <a href="STRIPE_PRO_LINK" class="btn btn-secondary">Start Free Trial</a>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Questions? Contact us at <a href="mailto:SUPPORT_EMAIL">SUPPORT_EMAIL</a></p>
+            <p style="margin-top: 20px;">
+                <a href="update.html">Manage Subscription</a> | 
+                <a href="INTAKE_FORM_LINK">Add Podcasts</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

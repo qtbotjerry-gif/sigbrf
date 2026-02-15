@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Your Subscription - SignalBrief</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 700px;
+            background: white;
+            border-radius: 12px;
+            padding: 60px 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #667eea;
+            text-align: center;
+        }
+        
+        p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            color: #555;
+            text-align: center;
+        }
+        
+        .options {
+            margin: 40px 0;
+        }
+        
+        .option {
+            padding: 25px;
+            margin-bottom: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.2s;
+        }
+        
+        .option:hover {
+            transform: translateX(5px);
+        }
+        
+        .option h2 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .option p {
+            text-align: left;
+            margin-bottom: 15px;
+            color: #666;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: #5568d3;
+        }
+        
+        .btn-secondary {
+            background: #764ba2;
+        }
+        
+        .btn-secondary:hover {
+            background: #653a8e;
+        }
+        
+        .btn-danger {
+            background: #dc3545;
+        }
+        
+        .btn-danger:hover {
+            background: #c82333;
+        }
+        
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 40px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        .support {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #e0e0e0;
+            text-align: center;
+            color: #666;
+        }
+        
+        .support a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .support a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Manage Your Subscription</h1>
+        <p>Update your podcasts, preferences, billing, or cancel your subscription.</p>
+        
+        <div class="options">
+            <div class="option">
+                <h2>📰 Update Podcasts</h2>
+                <p>Add or remove podcasts from your daily digest.</p>
+                <a href="UPDATE_FORM_LINK" class="btn">Manage Podcasts</a>
+            </div>
+            
+            <div class="option">
+                <h2>💳 Billing & Plan</h2>
+                <p>Update your payment method, change plans, or view invoices.</p>
+                <a href="STRIPE_PORTAL_LINK" class="btn btn-secondary">Manage Billing</a>
+            </div>
+            
+            <div class="option">
+                <h2>🔕 Pause Subscription</h2>
+                <p>Temporarily pause your digests without canceling.</p>
+                <a href="mailto:SUPPORT_EMAIL?subject=Pause%20Subscription" class="btn">Request Pause</a>
+            </div>
+            
+            <div class="option">
+                <h2>❌ Cancel Subscription</h2>
+                <p>Sorry to see you go. Cancel anytime with no penalties.</p>
+                <a href="STRIPE_PORTAL_LINK" class="btn btn-danger">Cancel Subscription</a>
+            </div>
+        </div>
+        
+        <a href="/" class="back-link">← Back to Home</a>
+        
+        <div class="support">
+            <p>Need help? Contact us at <a href="mailto:SUPPORT_EMAIL">SUPPORT_EMAIL</a></p>
+        </div>
+    </div>
+</body>
+</html>
